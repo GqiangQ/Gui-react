@@ -1,0 +1,42 @@
+@import '../var';
+.gui-dialog {
+    position: fixed;
+    background: #fff;
+    border-radius: 4px;
+    top: 12em;
+    left: 50%;
+    min-width: 15em;
+    transform: translate(-50%, -50%);
+    &-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: fade_out(#000, 0.5);
+    }
+    &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $main-color;
+    }
+    &-header {
+        font-size: 16px;
+        padding: 8px;
+        padding: 18px 16px;
+    }
+    &-main {
+        min-height: 6em;
+        padding: 24px 16px;
+        border: 1px solid fade_out(#000, 0.8);
+        border-left: none;
+        border-right: none;
+    }
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 16px;
+    }
+}
